@@ -1,0 +1,14 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+  RewriteBase /tillgit/omgit/page/trial
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule (.*) index.php/$1 [NC,L]
+</IfModule>
+
+<Files ~ "^\.rdt">
+    Order allow,deny
+    Deny from all
+</Files>
+
+
